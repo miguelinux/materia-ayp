@@ -1,0 +1,65 @@
+% ex: ts=4 sw=4 sts=4 et filetype=tex
+% SPDX-License-Identifier: CC-BY-SA-4.0
+\documentclass[aspectratio=169]{beamer}
+
+\usetheme{Boadilla}
+
+\setbeamertemplate{navigation symbols}{} % To remove the navigation symbols from the bottom of all slides
+
+\graphicspath{{../img/}{../styles/iteso/}}
+% use the command "usepackage" instead of "usecolortheme" to use the path to styles
+\usepackage{../styles/iteso/beamercolorthemeiteso}
+
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx} % Allows including images
+
+\title[Conceptos básicos de la programación de computadoras]{Conceptos básicos de la programación de computadoras}
+
+\author{Miguel Bernal Marin} % Your name
+\institute[ITESO] % Your institution as it will appear on the bottom of every slide, may be shorthand to save space
+{
+ ITESO, Universidad \\
+ Jesuita de Guadalajara \\% Your institution for the title page
+\medskip
+\textit{miguel.bernal@iteso.mx} % Your email address
+}
+\date{
+    \today
+} % Date, can be changed to a custom date
+
+
+%------------------------------------------------------------
+%The next block of commands puts the table of contents at the 
+%beginning of each section and highlights the current section:
+\AtBeginSection[]
+{
+  \begin{frame}
+    \frametitle{Contenido}
+    \tableofcontents[currentsection]
+  \end{frame}
+}
+%------------------------------------------------------------
+
+\begin{document}
+{ % Portada de la universidad
+  \setbeamertemplate{footline}{}
+  \usebackgroundtemplate{\includegraphics[width=\paperwidth]{fondo-portada.png}}
+  \begin{frame}
+  \end{frame}
+}
+
+\begin{frame}
+    \titlepage
+\end{frame}
+
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{fondo.png}}
+
+\input{contenido.tex}
+
+{ % Portada de la universidad
+  \setbeamertemplate{footline}{}
+  \usebackgroundtemplate{\includegraphics[width=\paperwidth]{fondo-portada.png}}
+  \begin{frame}
+  \end{frame}
+}
+\end{document}
