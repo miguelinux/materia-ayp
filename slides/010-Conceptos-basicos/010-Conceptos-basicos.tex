@@ -1,4 +1,4 @@
-% ex: ts=4 sw=4 sts=4 et filetype=tex
+% ex: ts=2 sw=2 sts=2 et filetype=tex
 % SPDX-License-Identifier: CC-BY-SA-4.0
 \documentclass[aspectratio=169]{beamer}
 
@@ -12,6 +12,57 @@
 
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx} % Allows including images
+
+\usepackage{tikz} % the tikz package
+\usetikzlibrary{shapes.geometric, arrows}
+
+\tikzstyle{iniciofin} = [rectangle,
+                         rounded corners,
+                         minimum width=1.5cm,
+                         minimum height=0.5cm,
+                         text centered,
+                         font=\small,
+                         draw=black,
+                         fill=orange!20 ]
+
+\tikzstyle{entrada} = [trapezium,
+                  trapezium left angle=70,
+                  trapezium right angle=110,
+                  minimum width=1.5cm,
+                  minimum height=0.5cm,
+                  text centered,
+                  font=\small,
+                  draw=black,
+                  fill=red!20]
+
+\tikzstyle{salida} = [trapezium,
+                  trapezium left angle=70,
+                  trapezium right angle=110,
+                  minimum width=1.5cm,
+                  minimum height=0.5cm,
+                  text centered,
+                  font=\small,
+                  draw=black,
+                  fill=green!20]
+
+\tikzstyle{proceso} = [rectangle,
+                       minimum width=1.5cm,
+                       minimum height=0.5cm,
+                       text centered,
+                       font=\small,
+                       draw=black,
+                       fill=yellow!20]
+
+\tikzstyle{decision} = [diamond,
+                        minimum width=1.5cm,
+                        minimum height=0.5cm,
+                        text centered,
+                        font=\small,
+                        draw=black,
+                        fill=blue!20]
+
+\tikzstyle{flecha} = [thick,->,>=stealth]
+
 
 \title[Conceptos básicos de la programación de computadoras]{Conceptos básicos de la programación de computadoras}
 
