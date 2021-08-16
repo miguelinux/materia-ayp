@@ -44,10 +44,48 @@
   \end{columns}
 \end{frame}
 
-\begin{frame}[c]{Título}
+\begin{frame}[c]{Algoritmo}
+  \begin{columns}
+    \column{0.7\textwidth}
     \begin{center}
-        Texto
+      \begin{tikzpicture}[node distance = 2cm]
+        \node (problema) [rectangle, fill=none]{Problema};
+        \node (flecha) [single arrow, minimum height=1.5cm, right of=problema, fill=cyan!50]{};
+        \node (solucion) [rectangle, fill=none, right of=flecha] {Solución};
+      \end{tikzpicture}
+
+      \vspace{1cm}
+
+      \begin{itemize}
+        \item El mismo problema puede ser resuelto por más de dos algoritmos
+          diferentes. Mientras más grande sea el problema mayor es la diversidad
+          de algoritmos que existen para resolverlo.
+      \end{itemize}
     \end{center}
+    \column{0.3\textwidth}
+    \begin{center}
+    \begin{tikzpicture}[node distance = 1cm, node font=\tiny]
+      \node (inicio) [iniciofin] {Inicio};
+      \node (e1)   [entrada, below of=inicio] {Entrada};
+      \node (proc1) [proceso, below of=e1] {Proceso 1};
+      \node (dec1)  [decision, below of=proc1, yshift=-0.4cm] {Decisión};
+      \node (proc2a) [proceso, below of=dec1,  yshift=-0.4cm] {Proceso 2a};
+      \node (proc2b) [proceso, right of=dec1,  xshift=1.2cm] {Proceso 2b};
+      \node (s1)   [salida, below of=proc2a] {Salida};
+      \node (fin) [iniciofin, below of=s1] {fin};
+
+      \draw[flecha] (inicio) -- (e1);
+      \draw[flecha] (e1) -- (proc1);
+      \draw[flecha] (proc1) -- (dec1);
+      \draw[flecha] (dec1) -- node[anchor=east]{si} (proc2a);
+      \draw[flecha] (dec1) -- node[anchor=south]{no}(proc2b);
+      \draw[flecha] (proc2a) -- (s1);
+      \draw[flecha] (s1) -- (fin);
+      \draw[flecha] (proc2b) |- (s1);
+
+    \end{tikzpicture}
+    \end{center}
+  \end{columns}
 \end{frame}
 
 \section{Lenguajes de programación y su clasificación}
