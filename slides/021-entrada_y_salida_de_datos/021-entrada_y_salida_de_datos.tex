@@ -6,7 +6,8 @@
 
 \setbeamertemplate{navigation symbols}{} % To remove the navigation symbols from the bottom of all slides
 
-\graphicspath{{../img/}{../styles/iteso/}}
+\graphicspath{{../../../slides/python/img/}{../styles/iteso/}}
+
 % use the command "usepackage" instead of "usecolortheme" to use the path to styles
 \usepackage{../styles/iteso/beamercolorthemeiteso}
 
@@ -57,7 +58,13 @@
   showstringspaces=false,
   showtabs=false,
   upquote=true,                      % requires textcomp
-  tabsize=2
+  tabsize=2,
+  % Español
+  literate=%
+  {á}{{\'a}}1 {é}{{\'e}}1 {í}{{\'i}}1 {ó}{{\'o}}1 {ú}{{\'u}}1
+  {Á}{{\'A}}1 {É}{{\'E}}1 {Í}{{\'I}}1 {Ó}{{\'O}}1 {Ú}{{\'U}}1
+  {¡}{{!`}}1  {¿}{{?`}}1
+  {ñ}{{\~n}}1 {Ñ}{{\~N}}1
 }
 
 %"mystyle" code listing set
@@ -97,7 +104,7 @@
     \tableofcontents
 \end{frame}
 
-\input{contenido.tex}
+\input{../../../slides/python/tutorial/04-entradas_y_salidas_de_datos/contenido.tex}
 
 { % Portada de la universidad
   \setbeamertemplate{footline}{}
