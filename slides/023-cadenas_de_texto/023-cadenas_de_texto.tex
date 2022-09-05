@@ -6,7 +6,8 @@
 
 \setbeamertemplate{navigation symbols}{} % To remove the navigation symbols from the bottom of all slides
 
-\graphicspath{{../img/}{../styles/iteso/}}
+\graphicspath{{../../../slides/python/img/}{../styles/iteso/}}
+
 % use the command "usepackage" instead of "usecolortheme" to use the path to styles
 \usepackage{../styles/iteso/beamercolorthemeiteso}
 
@@ -27,7 +28,7 @@
 \textit{miguel.bernal@iteso.mx}
 }
 \date{
-    15 de Febrero de 2022
+    5 de Septiembre de 2022
 } % Date, can be changed to a custom date
 
 %New colors defined below
@@ -58,7 +59,13 @@
   showstringspaces=false,
   showtabs=false,
   upquote=true,                      % requires textcomp
-  tabsize=2
+  tabsize=2,
+  % Español
+  literate=%
+  {á}{{\'a}}1 {é}{{\'e}}1 {í}{{\'i}}1 {ó}{{\'o}}1 {ú}{{\'u}}1
+  {Á}{{\'A}}1 {É}{{\'E}}1 {Í}{{\'I}}1 {Ó}{{\'O}}1 {Ú}{{\'U}}1
+  {¡}{{!`}}1  {¿}{{?`}}1
+  {ñ}{{\~n}}1 {Ñ}{{\~N}}1
 }
 
 %"mystyle" code listing set
@@ -98,7 +105,7 @@
     \tableofcontents
 \end{frame}
 
-\input{contenido.tex}
+\input{../../../slides/python/tutorial/03_cadenas_de_texto/contenido.tex}
 
 { % Portada de la universidad
   \setbeamertemplate{footline}{}
