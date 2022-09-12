@@ -6,7 +6,8 @@
 
 \setbeamertemplate{navigation symbols}{} % To remove the navigation symbols from the bottom of all slides
 
-\graphicspath{{../img/}{../styles/iteso/}}
+\graphicspath{{../../../slides/python/img/}{../styles/iteso/}}
+
 % use the command "usepackage" instead of "usecolortheme" to use the path to styles
 \usepackage{../styles/iteso/beamercolorthemeiteso}
 
@@ -26,7 +27,7 @@
 \textit{miguel.bernal@iteso.mx}
 }
 \date{
-    22 de Febrero de 2022
+    12 de Septiembre de 2022
 } % Date, can be changed to a custom date
 
 %New colors defined below
@@ -57,11 +58,29 @@
   showstringspaces=false,
   showtabs=false,
   upquote=true,                      % requires textcomp
-  tabsize=2
+  tabsize=2,
+  % Español
+  literate=%
+  {á}{{\'a}}1 {é}{{\'e}}1 {í}{{\'i}}1 {ó}{{\'o}}1 {ú}{{\'u}}1
+  {Á}{{\'A}}1 {É}{{\'E}}1 {Í}{{\'I}}1 {Ó}{{\'O}}1 {Ú}{{\'U}}1
+  {¡}{{!`}}1  {¿}{{?`}}1
+  {ñ}{{\~n}}1 {Ñ}{{\~N}}1
 }
 
 %"mystyle" code listing set
 \lstset{style=mystyle}
+
+%------------------------------------------------------------
+%The next block of commands puts the table of contents at the
+%beginning of each section and highlights the current section:
+%\AtBeginSection[]
+%{
+%  \begin{frame}
+%    \frametitle{Contenido}
+%    \tableofcontents[currentsection]
+%  \end{frame}
+%}
+%------------------------------------------------------------
 
 \newcommand{\pausa}{\pause} % Para usar una pausa en las presentaciones
 %\newcommand{\pausa}{}      % Para que NO salgan las pausas
@@ -85,7 +104,7 @@
     \tableofcontents
 \end{frame}
 
-\input{contenido.tex}
+\input{../../../slides/python/tutorial/05-estructuras_selectivas/contenido.tex}
 
 { % Portada de la universidad
   \setbeamertemplate{footline}{}
