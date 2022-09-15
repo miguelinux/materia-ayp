@@ -9,3 +9,6 @@
 |5| Presentaciones| 020-introducción a Python<br>021-entrada y salida de datos|
 |6| Instalación de Pycharm <br>y ejercicios de ejemplo| 022-tipos de datos|
 |7| Presentación| 023 Cadenas de texto|
+|8| Hacer los 5 ejercicios de Tarea de Python | |
+|9| Presentaciones y ejercicio en cuaderno | 030 estructuras selectivas |
+|10| Realizar los ejercicios en Python |  |
