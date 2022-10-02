@@ -8,7 +8,7 @@ def cabecera():
     """
     print("====================")
     print("|     Tiendita     |")
-    print("--------------------"
+    print("--------------------")
     print("======= Menu =======\n")
 
 
@@ -21,7 +21,7 @@ def inicial():
         cabecera()
         print("1. Ingresar Usuario")
         print("2. Registrar Usuario\n")
-        opcion = eval(input("Opción: ")
+        opcion = eval(input("Opción: "))
 
     return opcion
 
