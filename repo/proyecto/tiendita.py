@@ -10,12 +10,14 @@ def main():
     """
     Función principal de la tiendita
     """
-    opcion = menu.inicial():
+    opcion = menu.inicial()
 
     if   opcion == 1:
         if not usuario.ingresar():
+            pass
 
     elif opcion == 2:
+        pass
 
 
 
