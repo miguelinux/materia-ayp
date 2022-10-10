@@ -6,7 +6,8 @@
 
 \setbeamertemplate{navigation symbols}{} % To remove the navigation symbols from the bottom of all slides
 
-\graphicspath{{../img/}{../styles/iteso/}}
+\graphicspath{{../../../slides/python/img/}{../styles/iteso/}}
+
 % use the command "usepackage" instead of "usecolortheme" to use the path to styles
 \usepackage{../styles/iteso/beamercolorthemeiteso}
 
@@ -26,7 +27,7 @@
 \textit{miguel.bernal@iteso.mx}
 }
 \date{
-    29 de Marzo de 2022
+    10 de Octubre de 2022
 } % Date, can be changed to a custom date
 
 %New colors defined below
@@ -36,7 +37,22 @@
 \definecolor{codeKeyword2}{rgb}{0.0, 0.545,0.545}
 \definecolor{codeNumbers}{rgb}{0.5,0.5,0.5}
 \definecolor{codeString}{rgb}{1.0, 0.0, 1.0}
+\definecolor{codeString2}{rgb}{0.0, 0.5, 0.0}
 \definecolor{light-gray}{gray}{0.90}
+
+% Lenguaje PSeInt
+\lstdefinelanguage{PSeInt}{
+  keywords={Algoritmo, FinAlgoritmo, Funcion, Escribir, Leer, Si, Entonces,
+  SiNo, Fin, Segun, Hacer, De, Otro, Modo, Mientras, Repetir, Hasta, Que,
+  Para, Hasta, Con, Paso},
+  sensitive=False,
+  morecomment=[l]{//},
+  morecomment=[s]{/*}{*/},
+  morestring=[b]',
+  morestring=[b]",
+  alsoletter={<>=-:;},
+  alsodigit={-}
+}
 
 %Code listing style named "mystyle"
 \lstdefinestyle{mystyle}{
@@ -57,14 +73,65 @@
   showstringspaces=false,
   showtabs=false,
   upquote=true,                      % requires textcomp
-  tabsize=2
+  tabsize=2,
+  % Español
+  literate=%
+  {á}{{\'a}}1 {é}{{\'e}}1 {í}{{\'i}}1 {ó}{{\'o}}1 {ú}{{\'u}}1
+  {Á}{{\'A}}1 {É}{{\'E}}1 {Í}{{\'I}}1 {Ó}{{\'O}}1 {Ú}{{\'U}}1
+  {¡}{{!`}}1  {¿}{{?`}}1
+  {ñ}{{\~n}}1 {Ñ}{{\~N}}1
+}
+
+\lstdefinestyle{pseudocodigo} {%
+  backgroundcolor=\color{light-gray},
+  basicstyle={\footnotesize\ttfamily},
+  numberstyle=\tiny\color{codeNumbers},
+  xleftmargin={0.2cm},
+  numbersep=5pt,
+  numbers=left,
+  stepnumber=1,
+  firstnumber=1,
+  numberfirstline=true,
+  % Code design
+  identifierstyle=\color{black},
+  keywordstyle=\color{blue}\bfseries,
+  ndkeywordstyle=\color{red}\bfseries,
+  stringstyle=\color{codeString2}\ttfamily,
+  commentstyle=\color{codeNumbers}\ttfamily,
+  % Code
+  language=PSeInt,
+  alsodigit={.:;},
+  tabsize=2,
+  showtabs=false,
+  showspaces=false,
+  showstringspaces=false,
+  extendedchars=true,
+  breaklines=true,
+  % Español
+  literate=%
+  {á}{{\'a}}1 {é}{{\'e}}1 {í}{{\'i}}1 {ó}{{\'o}}1 {ú}{{\'u}}1
+  {Á}{{\'A}}1 {É}{{\'E}}1 {Í}{{\'I}}1 {Ó}{{\'O}}1 {Ú}{{\'U}}1
+  {¡}{{!`}}1  {¿}{{?`}}1
+  {ñ}{{\~n}}1 {Ñ}{{\~N}}1
 }
 
 %"mystyle" code listing set
 \lstset{style=mystyle}
 
-%\newcommand{\pausa}{\pause} % Para usar una pausa en las presentaciones
-\newcommand{\pausa}{}      % Para que NO salgan las pausas
+%------------------------------------------------------------
+%The next block of commands puts the table of contents at the
+%beginning of each section and highlights the current section:
+%\AtBeginSection[]
+%{
+%  \begin{frame}
+%    \frametitle{Contenido}
+%    \tableofcontents[currentsection]
+%  \end{frame}
+%}
+%------------------------------------------------------------
+
+\newcommand{\pausa}{\pause} % Para usar una pausa en las presentaciones
+%\newcommand{\pausa}{}      % Para que NO salgan las pausas
 
 \begin{document}
 { % Portada de la universidad
@@ -85,7 +152,28 @@
     \tableofcontents
 \end{frame}
 
-\input{contenido.tex}
+\input{../../../slides/python/tutorial/11-funciones/contenido.tex}
+
+\begin{frame}[c]{Ejercicio}
+  \vspace{\baselineskip}
+  Realizar un programa en Python que represente un menú con las opciones
+  siguientes:
+
+  \vspace{\baselineskip}
+  \begin{enumerate}
+    \item Calcular el área de un rectángulo
+    \item Calcular el área de un triangulo
+    \item Calcular el área de un cuadrado
+    \item Calcular el área de un circulo
+    \item Salir
+  \end{enumerate}
+
+
+  \vspace{\baselineskip}
+  Utilizar funciones para imprimir el menú, y para calcular cada una de las
+  áreas. Las funciones para calcular áreas deben regresar su valor (usando
+  return)
+\end{frame}
 
 { % Portada de la universidad
   \setbeamertemplate{footline}{}
