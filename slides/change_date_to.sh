@@ -4,17 +4,40 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-FECHA=$*
+FECHA="\\\\today"
+DIRS="*"
+_DIRS=""
 
-if [ -z "$FECHA" ]
+while [ -n "${1}" ]
+do
+    case "$1" in
+        -d|--debug)
+            set -x
+        ;;
+        -e|--error)
+            set -e
+        ;;
+        -f|--fecha)
+            shift
+            FECHA="$1"
+        ;;
+        *)
+            _DIRS="${_DIRS} $1"
+        ;;
+    esac
+    shift
+done
+
+if [ -n "$_DIRS" ]
 then
-    exit
+    DIRS="$_DIRS"
 fi
 
-for f in 0*
+for d in $DIRS
 do
-    if [ -d $f ]
+    f=$d/${d:0:3}*.tex
+    if [ -d $d -a -f $f ]
     then
-        sed -i "/^\\\date/{n;s/.*/$FECHA/}" $f/${f:0:3}*.tex
+        sed -i "/^\\\date/{n;s/.*/$FECHA/}" $f
     fi
 done
