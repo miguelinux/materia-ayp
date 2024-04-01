@@ -10,3 +10,7 @@ Faltó el diagrama de flujo
 Faltó el Pseudocódigo
 
 Faltó el Pseudocódigo y diagrama de flujo
+
+Y, ¿Cuál es el resultado final?
+
+Usa nombres de variables descriptivas, no solo a,b,c o x,y,z
