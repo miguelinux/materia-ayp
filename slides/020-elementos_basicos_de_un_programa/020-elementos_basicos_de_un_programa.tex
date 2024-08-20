@@ -1,0 +1,69 @@
+% ex: ts=2 sw=2 sts=2 et filetype=tex
+% SPDX-License-Identifier: CC-BY-SA-4.0
+\documentclass[aspectratio=169]{beamer}
+
+\usetheme{Boadilla}
+
+\setbeamertemplate{navigation symbols}{}
+\graphicspath{{../img/}{../styles/iteso/}}
+\usepackage{../styles/iteso/beamercolorthemeiteso}
+
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{listings}
+
+\title[Elementos básicos de un programa]{Estructuras secuenciales:\\
+Elementos básicos de un programa}
+
+\input{../common/lstPseInt}
+
+\author{Miguel Bernal Marin} % Your name
+\institute[ITESO] % Your institution as it will appear on the bottom of every slide, may be shorthand to save space
+{
+ ITESO, Universidad \\
+ Jesuita de Guadalajara \\% Your institution for the title page
+\medskip
+\textit{miguel.bernal@iteso.mx} % Your email address
+}
+\date{
+Otoño 2024
+} % Date, can be changed to a custom date
+
+\newcommand{\pausa}{\pause} % Para usar una pausa en las presentaciones
+%\newcommand{\pausa}{}      % Para que NO salgan las pausas
+
+%------------------------------------------------------------
+%The next block of commands puts the table of contents at the 
+%beginning of each section and highlights the current section:
+\AtBeginSection[]
+{
+  \begin{frame}
+    \frametitle{Contenido}
+    \tableofcontents[currentsection]
+  \end{frame}
+}
+%------------------------------------------------------------
+
+\begin{document}
+{ % Portada de la universidad
+  \setbeamertemplate{footline}{}
+  \usebackgroundtemplate{\includegraphics[width=\paperwidth]{fondo-portada.png}}
+  \begin{frame}
+  \end{frame}
+}
+
+\begin{frame}
+    \titlepage
+\end{frame}
+
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{fondo.png}}
+
+\input{contenido.tex}
+
+{ % Portada de la universidad
+  \setbeamertemplate{footline}{}
+  \usebackgroundtemplate{\includegraphics[width=\paperwidth]{fondo-portada.png}}
+  \begin{frame}
+  \end{frame}
+}
+\end{document}
