@@ -5,6 +5,8 @@ No es necesario declarar las variables
 
 Esta bien la tarea, pero parece que esta copiada de Internet.
 
+Esta bien, pero tiene instrucciones que aun no hemos visto.
+
 Faltó el diagrama de flujo
 
 Faltó el Pseudocódigo
