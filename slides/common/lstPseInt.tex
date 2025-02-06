@@ -2,14 +2,12 @@
 % SPDX-License-Identifier: CC-BY-SA-4.0
 
 \definecolor{codeString2}{rgb}{0.0, 0.5, 0.0}
-\definecolor{codeNumbers0}{rgb}{0.5,0.5,0.5}
-\definecolor{light-gray0}{gray}{0.90}
 
 % Lenguaje PSeInt 
 \lstdefinelanguage{PSeInt}{
   keywords={Algoritmo, FinAlgoritmo, Funcion, Escribir, Leer, Si, Entonces,
   SiNo, Fin, Segun, Hacer, De, Otro, Modo, Mientras, Repetir, Hasta, Que,
-  Para, Hasta, Con, Paso},
+  Para, Hasta, Con, Paso, Sin, Saltar},
   sensitive=False,
   morecomment=[l]{//},
   morecomment=[s]{/*}{*/},
@@ -20,9 +18,10 @@
 }
 
 \lstdefinestyle{pseudocodigo} {%
-  backgroundcolor=\color{light-gray0},
+  % General design
+  backgroundcolor=\color{light-gray},
   basicstyle={\footnotesize\ttfamily},
-  numberstyle=\tiny\color{codeNumbers0},
+  numberstyle=\tiny\color{codeNumbers},
   xleftmargin={0.2cm},
   numbersep=5pt,
   numbers=left,
@@ -32,9 +31,9 @@
   % Code design
   identifierstyle=\color{black},
   keywordstyle=\color{blue}\bfseries,
-  ndkeywordstyle=\color{red}\bfseries,
+  keywordstyle={[2]\color{red}\ttfamily},
   stringstyle=\color{codeString2}\ttfamily,
-  commentstyle=\color{codeNumbers0}\ttfamily,
+  commentstyle=\color{codeNumbers}\ttfamily,
   % Code
   language=PSeInt,
   alsodigit={.:;},
@@ -44,6 +43,10 @@
   showstringspaces=false,
   extendedchars=true,
   breaklines=true,
+  breakatwhitespace=false,
+  captionpos=b,
+  keepspaces=true,
+  upquote=true,                      % requires textcomp
   % Español
   literate=%
   {á}{{\'a}}1 {é}{{\'e}}1 {í}{{\'i}}1 {ó}{{\'o}}1 {ú}{{\'u}}1
