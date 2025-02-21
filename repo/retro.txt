@@ -1,18 +1,18 @@
-
-No es necesario declarar las variables
-
 ¿Necesitas ayuda con tu tarea?
 
-Esta bien la tarea, pero parece que esta copiada de Internet.
-
 Esta bien, pero tiene instrucciones que aun no hemos visto.
-
 Faltó el diagrama de flujo
-
+Faltó el diagrama de flujo y el código de Python
 Faltó el Pseudocódigo
-
 Faltó el Pseudocódigo y diagrama de flujo
+Faltó el código de Python
 
 Y, ¿Cuál es el resultado final?
 
 Usa nombres de variables descriptivas, no solo a,b,c o x,y,z
+
+No es necesario declarar las variables
+
+Esta bien la tarea, pero parece que esta copiada de Internet.
+
+
