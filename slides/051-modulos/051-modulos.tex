@@ -1,0 +1,78 @@
+% ex: ts=2 sw=2 sts=2 et filetype=tex
+% SPDX-License-Identifier: CC-BY-SA-4.0
+\documentclass[aspectratio=169]{beamer}
+
+\usetheme{Boadilla}
+
+\setbeamertemplate{navigation symbols}{} % To remove the navigation symbols from the bottom of all slides
+
+\graphicspath{{../../../slides/python/img/}{../styles/iteso/}}
+
+% use the command "usepackage" instead of "usecolortheme" to use the path to styles
+\usepackage{../styles/iteso/beamercolorthemeiteso}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc} %% https://tex.stackexchange.com/questions/664/why-should-i-use-usepackaget1fontenc
+\usepackage{graphicx} % Allows including images
+\usepackage{listings}
+
+\title{Módulos en Python}
+
+\author{Miguel Bernal Marin}
+\institute[ITESO]
+{
+ ITESO, Universidad \\
+ Jesuita de Guadalajara \\
+\medskip
+\textit{miguel.bernal@iteso.mx}
+}
+\date{
+Primavera 2025
+} % Date, can be changed to a custom date
+
+\input{../../../slides/common/lstPython}
+
+\newcommand{\pausa}{\pause} % Para usar una pausa en las presentaciones
+%\newcommand{\pausa}{}      % Para que NO salgan las pausas
+
+
+%------------------------------------------------------------
+%The next block of commands puts the table of contents at the
+%beginning of each section and highlights the current section:
+%\AtBeginSection[]
+%{
+%  \begin{frame}
+%    \frametitle{Contenido}
+%    \tableofcontents[currentsection]
+%  \end{frame}
+%}
+%------------------------------------------------------------
+
+\begin{document}
+{ % Portada de la universidad
+  \setbeamertemplate{footline}{}
+  \usebackgroundtemplate{\includegraphics[width=\paperwidth]{fondo-portada.png}}
+  \begin{frame}
+  \end{frame}
+}
+
+\begin{frame}
+    \titlepage
+\end{frame}
+
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{fondo.png}}
+
+\begin{frame}
+    \frametitle{Contenido}
+    \tableofcontents
+\end{frame}
+
+\input{../../../slides/python/tutorial/12-modulos/contenido.tex}
+
+{ % Portada de la universidad
+  \setbeamertemplate{footline}{}
+  \usebackgroundtemplate{\includegraphics[width=\paperwidth]{fondo-portada.png}}
+  \begin{frame}
+  \end{frame}
+}
+\end{document}
